@@ -1,0 +1,66 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: rgb(38, 38, 38);
+    /* padding-inline: 10rem; */
+    color: white;
+    font-size: 1.5rem;
+    display: grid;
+    justify-content: center;
+}
+.base {
+    margin-inline: 8rem;
+    max-width: 50rem;
+}
+.output-field {
+    padding-block: 1rem;
+    display: grid;
+    gap: 1rem;
+    word-wrap: break-word;
+    word-break: break-all;
+
+    .previous-num {
+        display: grid;
+        justify-content: right;
+        font-size: 1rem;
+    }
+    .current-num {
+        display: grid;
+        justify-content: right;
+        font-size: 3rem;
+    }
+    .num {
+        margin: 0;
+    }
+}
+.number-pad  {
+    height: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: .125rem;
+
+    .calc-buttons {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: .25rem;
+        display: grid;
+        justify-content: center;
+        align-items: center; 
+        padding: 1.5rem 3rem;
+        cursor: pointer;
+    }
+    .calc-buttons.all-clear, .calc-buttons.equals {
+        grid-column: span 2;
+    }
+    .calc-buttons:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    .equals {
+        background-color: rgb(255, 153, 161);
+        color: black; 
+    }
+}
+.calc-buttons.equals:hover {
+    background-color: rgb(246, 134, 143);
+}
